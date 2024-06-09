@@ -1,6 +1,6 @@
 <template>
     <div>
-        <header>
+        <header class="header">
             <nav class="nav">
               <router-link to="/">Home</router-link>
               <router-link to="/about">About</router-link>
@@ -61,15 +61,22 @@
           </section>
     
         <div v-if="showModal" class="fixed inset-0 bg-black bg-opacity-75 flex items-center justify-center" @click="closeModal">
-          <div class="bg-[#1e1e1f] p-5 rounded-lg max-w-xl w-full transform transition-transform" :class="{'scale-50': isScaled}" @click.stop>
-            <div class="flex justify-end">
-              <button @click="closeModal" class="text-white hover:text-amber-300">&times;</button>
-            </div>
-            <video v-if="selectedVideoUrl" autoplay loop controls @click="scaleDown" :src="selectedVideoUrl" class="w-full rounded-lg"></video>
+      <div class="bg-[#1e1e1f] p-5 rounded-lg max-w-xl w-full transform transition-transform" :class="{'scale-50': isScaled}" @click.stop>
+        <div class="flex justify-end">
+          <button @click="closeModal" class="text-white hover:text-amber-300">&times;</button>
+        </div>
+        <div class="gallery-container">
+          <video v-if="selectedVideoUrl" autoplay loop controls :src="selectedVideoUrl" class="w-full rounded-lg"></video>
+          <div v-else class="image-gallery">
+            <img v-for="(image, index) in images" :key="index" :src="image" :class="{ 'active': index === currentImageIndex }" class="gallery-image">
+            <button @click="prevImage" class="gallery-nav prev">&#10094;</button>
+            <button @click="nextImage" class="gallery-nav next">&#10095;</button>
           </div>
         </div>
       </div>
-    </template>
+    </div>
+  </div>
+</template>
     
     <script setup>
     import '../script.js';
@@ -77,6 +84,12 @@
     
         <script>
             export default {
+                mounted() {
+      window.addEventListener('scroll', this.handleScroll);
+    },
+    unmounted() {
+  window.removeEventListener('scroll', this.handleScroll);
+},
       data() {
         return {
           activeTab: 1,
@@ -154,15 +167,23 @@
         scaleDown() {
           this.isScaled = true;
           this.$refs.video.style.transform = 'scale(0.5)';
-        }
+        },
+    //     handleScroll() {
+    //     const nav = document.querySelector('.nav');
+    //     if (window.scrollY > 0) {
+    //       nav.classList.add('scrolled');
+    //     } else {
+    //       nav.classList.remove('scrolled');
+    //     }
+    //   }
       }
     };
-            </script>
+</script>
             
     
-            <style src="../assets/css/styles.css"></style>
-            <style>
-           .item-card:hover {
+    <style src="../assets/css/styles.css"></style>
+    <style>
+    .item-card:hover {
       transition: transform 0.3s ease;
       transform: translateY(-8px);
     }
@@ -196,6 +217,14 @@
     .nav{
         position: fixed;
     }
+
+    @media (max-width: 768px){
+        .nav{
+        position: fixed;
+        transform: scale(0.7);
+        margin-left: -22vw;
+    }
+    }
     
             ::-webkit-scrollbar {
       width: 5px; /* for vertical scrollbar */
@@ -214,6 +243,9 @@
     
     ::-webkit-scrollbar-button { width: 20px; }
            
+    .scrolled {
+    background-color: white;
+    }
     </style>
     
     

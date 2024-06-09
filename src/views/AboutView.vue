@@ -29,12 +29,12 @@
         </div>
         <div class="md:w-7/12">
           <p class="mb-3 md:mb-7 fadein-left fadeins-1" style="color: white;">
-            &nbsp; &nbsp; &nbsp; Hi everyone! My name is Alifa Gian Rafid. I'm a web developer from Bandung, West Java. I
+            Hi everyone! My name is Alifa Gian Rafid. I'm a web developer from Bandung, West Java. I
             have 1 year of experience in front-end web development.
             I really enjoy what I do right now, In my opinion, creating a web is not just a job, but it's like pouring out creative ideas from our minds.
           </p>
           <p class="mb-3 fadein-left fadeins-2" style="color: white;">
-            &nbsp; &nbsp; &nbsp; Besides making websites, I also enjoy making 3d models, games, and even video editing.
+            Besides making websites, I also enjoy making 3d models, games, and even video editing.
           </p>
         </div>
 
@@ -529,6 +529,15 @@
 
   .tech-status {
     font-size: 0.5rem;
+  }
+
+  .mb-3{
+    margin-right: 3vw;
+    margin-left: 3vw;
+  }
+
+  .title{
+    font-size: 7vw;
   }
 }
 
