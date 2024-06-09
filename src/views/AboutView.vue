@@ -116,8 +116,8 @@
         },
         {
           id: 3,
-          name: 'PHP',
-          imageUrl: 'https://cdn.iconscout.com/icon/free/png-256/free-php-2038871-1720084.png',
+          name: 'Java',
+          imageUrl: 'https://cdn.iconscout.com/icon/free/png-512/free-java-25-226002.png?f=webp&w=256',
           status: 'Beginner'
         },
         {
@@ -140,8 +140,8 @@
         },
         {
           id: 7,
-          name: 'Bootstrap',
-          imageUrl: 'https://getbootstrap.com/docs/5.2/assets/brand/bootstrap-logo-shadow.png',
+          name: 'C#',
+          imageUrl: 'https://cdn.iconscout.com/icon/free/png-512/free-c-2336965-1982846.png?f=webp&w=256',
           status: 'Beginner'
         },
         {

@@ -123,7 +123,6 @@
               id: 5,
               name: 'Battery Animation',
               imageUrl: 'blender',
-              status: 'Sistem Percepatan Pelayanan Surat Elektronik, A web application to manage letters in the village.',
               tech: 'Blender',
               github: 'null',
               demo: 'null',
@@ -133,8 +132,7 @@
               id: 6,
               name: 'My Best Edit So Far',
               imageUrl: 'edit',
-              status: 'Sistem Percepatan Pelayanan Surat Elektronik, A web application to manage letters in the village.',
-              tech: 'Blender',
+              tech: 'Adobe After Effect',
               github: 'null',
               demo: 'null',
               videoUrl: './img/ANNIS.mp4'
