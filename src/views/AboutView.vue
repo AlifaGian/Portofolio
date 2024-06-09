@@ -25,7 +25,7 @@
         class="text-sm md:text-lg text-justify flex flex-col gap-4 md:flex-row md:gap-8 md:justify-left md:items-center" style="background-color: #3b3291;">
         <div class="flex justify-center">
           <img class="w-9/12 rounded-full mb-3 fadein-up"
-            src="https://i1.sndcdn.com/avatars-000214125831-5q6tdw-t500x500.jpg" alt="Foto">
+          src="/img/porto.png" alt="Foto" style="width: 30vw; margin-left: 4vw; margin-right: 3vw;">
         </div>
         <div class="md:w-7/12">
           <p class="mb-3 md:mb-7 fadein-left fadeins-1" style="color: white;">

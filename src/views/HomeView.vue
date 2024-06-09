@@ -47,8 +47,8 @@
               </path>
             </svg>Download Resume</button> -->
         </div>
-        <div class="flex justify-center md:justify-start fadein-right"><img alt="avatar" fetchpriority="high" width="300" height="300" decoding="async" data-nimg="1"
-            class="w-10/12 md:h-auto rounded-full border-4 border-amber-200 pict" style="border-color: aqua;" src="https://i1.sndcdn.com/avatars-000214125831-5q6tdw-t500x500.jpg">
+        <div class="flex justify-center md:justify-start fadein-right"><img src="/img/porto.png" alt="avatar" fetchpriority="high" width="300" height="300" decoding="async" data-nimg="1"
+            class="w-10/12 md:h-auto rounded-full border-4 border-amber-200 pict" style="border-color: aqua; width: 30vw;">
         </div>
       </main>    
     </section>
