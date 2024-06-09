@@ -5,7 +5,7 @@
           <router-link to="/">Home</router-link>
           <router-link to="/about">About</router-link>
           <router-link to="/projects">Projects</router-link>
-            <a href="#">Contact</a>
+          <router-link to="/contact">Contact</router-link>
         </nav>
     </header>
 
@@ -14,7 +14,7 @@
         <img src="../assets/mount1.png" class="mount1">
         <img src="../assets/bush2.png" class="bush2">
 
-        <h1 class="title">Alifa Gian Rafid</h1>
+        <h1 class="title" style="font-size: 5VW;">Alifa Gian Rafid</h1>
 
         <img src="../assets/bush1.png" class="bush1">
         <img src="../assets/leaf2.png" class="leaf2">

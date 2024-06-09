@@ -5,7 +5,7 @@
               <router-link to="/">Home</router-link>
               <router-link to="/about">About</router-link>
               <router-link to="/projects">Projects</router-link>
-                <a href="#">Contact</a>
+              <router-link to="/contact">Contact</router-link>
             </nav>
         </header>
 
@@ -16,7 +16,7 @@
             <img src="../assets/mount1.png" class="mount1">
             <img src="../assets/bush2.png" class="bush2">
     
-            <h1 class="title">Projects</h1>
+            <h1 class="title" style="font-size: 5VW;">Projects</h1>
     
             <img src="../assets/bush1.png" class="bush1">
             <img src="../assets/leaf2.png" class="leaf2">
@@ -36,7 +36,7 @@
                     <div class="w-full flex flex-col gap-2 items-center text-sm md:text-base lg:text-lg">
                       <div class="title-text font-medium text-secondary">{{ item.name }}</div>
                       <div class="w-full text-left text-[10px] text-[#c1c1c1] md:text-xs lg:text-sm">{{ item.status }}</div>
-                      <div class="w-full mt-4 text-normal text-sm text-left text-amber-200">{{ item.tech }}</div>
+                      <div class="w-full mt-4 text-normal text-sm text-left text-amber-200" style="color: aqua;">{{ item.tech }}</div>
                       <div class="w-full flex justify-end">
                         <div class="flex cursor-pointer items-end gap-2 text-primary">
                           <a v-if="item.github !== 'null'" :href="item.github" target="_blank" rel="noreferrer" title="View github repository" class="transition-all hover:text-accent">
@@ -89,8 +89,8 @@
               imageUrl: 'portfolio_v2',
               status: 'My personal website, I created this website to display my profile, skills and projects. As well as my place to try new technology.',
               tech: 'VueJS 3, Tailwind',
-              github: 'https://github.com/rakha-elctrnx/Portofolio-v2',
-              demo: 'https://bagasrakha.netlify.app/'
+              github: 'null',
+              demo: 'null'
             },
             {
               id: 2,
@@ -98,7 +98,7 @@
               imageUrl: 'keraton',
               status: 'A website created to tell the history of the palace, and booking tour tickets. Here I work as a team and work on the front-end. ',
               tech: 'VueJS 3, Quasar',
-              github: 'null',
+              github: 'https://github.com/AlifaGian/Keraton.git',
               demo: 'null'
             },
             {
