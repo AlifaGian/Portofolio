@@ -1,7 +1,6 @@
 {
     "builds": [
-      { "src": "src/main.js", "use": "@vercel/node" },
-      { "src": "public/**/*", "use": "@vercel/static" }
+      { "src": "package.json", "use": "@vercel/static-build", "config": { "distDir": "dist" } }
     ],
     "routes": [
       { "src": "/(.*)", "dest": "/index.html" }
