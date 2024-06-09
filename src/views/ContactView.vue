@@ -14,7 +14,7 @@
             <img src="../assets/mount1.png" class="mount1">
             <img src="../assets/bush2.png" class="bush2">
     
-            <h1 class="title" style="font-size: 3vw;">This page is being created, please be patient</h1>
+            <h1 class="title" style="font-size: 3VW;">This page is being created, please be patient</h1>
     
             <img src="../assets/bush1.png" class="bush1">
             <img src="../assets/leaf2.png" class="leaf2">
@@ -25,8 +25,8 @@
             <main
             class="mt-10 md:mt-1 flex flex-col-reverse gap-8 items-center md:flex-row md:gap-16 md:justify-center min-h-[65vh] md:min-h-[80vh]">
             <div class="space-y-2 text-center md:text-left px-10">
-              <p class="text-amber-200" style="color: white;">Hello World, I'm</p>
-              <h1 class="text-4xl font-bold md:text-5xl text-white fadein-up">Alifa Gian Rafid</h1>
+              <p class="text-amber-200" style="color: white; ">Hello World, I'm</p>
+              <h1 class="text-4xl font-bold md:text-5xl text-white fadein-up" style="font-size: 7vw; width: 100vw;">Alifa Gian Rafid</h1>
               <div class="py-2">
                 <h1
                   class="typewrite text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-yellow-500 md:text-2xl fadein-up"
@@ -34,7 +34,7 @@
                   <span class="wrap">{{ txt }}</span>
                 </h1>
               </div>
-              <p class="text-white pr-4 fade-in-from-left">Welcome to My personal website. <span class="wave">👋🏼</span></p>
+              <p class="text-white pr-4 fade-in-from-left" style="margin-left: 4vw;">Welcome to My personal website. <span class="wave">👋🏼</span></p>
               <br>
               <!-- <button
                 class="fadein-bot fade-500 flex items-center py-2 px-4 mx-auto text-sm font-medium rounded-lg border transition duration-300 md:py-2.5 md:px-5 md:mx-0 text-amber-200 border-amber-200 hover:bg-amber-200 hover:bg-opacity-10 bg-transparent focus:outline-none w-fit"><svg
@@ -47,8 +47,8 @@
                   </path>
                 </svg>Download Resume</button> -->
             </div>
-            <div class="flex justify-center md:justify-start fadein-right"><img alt="avatar" fetchpriority="high" width="300" height="300" decoding="async" data-nimg="1"
-                class="w-10/12 md:h-auto rounded-full border-4 border-amber-200 pict" style="border-color: aqua;" src="https://i1.sndcdn.com/avatars-000214125831-5q6tdw-t500x500.jpg">
+            <div class="flex justify-center md:justify-start fadein-right"><img src="/img/porto.png" alt="avatar" fetchpriority="high" width="300" height="300" decoding="async" data-nimg="1"
+                class="w-10/12 md:h-auto rounded-full border-4 border-amber-200 pict" style="border-color: aqua; width: 30vw;">
             </div>
           </main>    
         </section>
@@ -125,6 +125,7 @@
             .typewrite>.wrap {
               border-right: 0.08em solid #fff;
               color: #49adff;
+              font-size: 7vw;
             }
             
             .wave {
