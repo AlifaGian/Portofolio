@@ -5,7 +5,7 @@
           <nav>
             <router-link to="/">Home</router-link>
             <router-link to="/about">About</router-link>
-              <a href="#">Services</a>
+              <router-link to="/projects">Projects</router-link>
               <a href="#">Contact</a>
           </nav>
       </header>
@@ -447,10 +447,12 @@
 
 .grid-container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
   gap: 20px;
   padding-bottom: 8rem;
+  margin: 0;
 }
+
 
 .grid-item {
   display: flex;

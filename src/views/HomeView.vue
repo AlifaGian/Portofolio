@@ -5,7 +5,7 @@
         <nav>
           <router-link to="/">Home</router-link>
           <router-link to="/about">About</router-link>
-            <a href="#">Services</a>
+          <router-link to="/projects">Projects</router-link>
             <a href="#">Contact</a>
         </nav>
     </header>
@@ -26,7 +26,7 @@
         <main
         class="mt-10 md:mt-1 flex flex-col-reverse gap-8 items-center md:flex-row md:gap-16 md:justify-center min-h-[65vh] md:min-h-[80vh]">
         <div class="space-y-2 text-center md:text-left px-10">
-          <p class="text-amber-200">Hello World, I'm</p>
+          <p class="text-amber-200" style="color: white;">Hello World, I'm</p>
           <h1 class="text-4xl font-bold md:text-5xl text-white fadein-up">Alifa Gian Rafid</h1>
           <div class="py-2">
             <h1
@@ -49,7 +49,7 @@
             </svg>Download Resume</button> -->
         </div>
         <div class="flex justify-center md:justify-start fadein-right"><img alt="avatar" fetchpriority="high" width="300" height="300" decoding="async" data-nimg="1"
-            class="w-10/12 md:h-auto rounded-full border-4 border-amber-200 pict" src="https://i1.sndcdn.com/avatars-000214125831-5q6tdw-t500x500.jpg">
+            class="w-10/12 md:h-auto rounded-full border-4 border-amber-200 pict" style="border-color: aqua;" src="https://i1.sndcdn.com/avatars-000214125831-5q6tdw-t500x500.jpg">
         </div>
       </main>    
     </section>
@@ -125,6 +125,7 @@ import '../script.js';
         
         .typewrite>.wrap {
           border-right: 0.08em solid #fff;
+          color: #49adff;
         }
         
         .wave {
