@@ -2,10 +2,10 @@
     <div>
         <header class="header">
             <nav class="nav">
-              <router-link to="/">Home</router-link>
-              <router-link to="/about">About</router-link>
-              <router-link to="/projects">Projects</router-link>
-              <router-link to="/contact">Contact</router-link>
+              <router-link to="/" class="nav">Home</router-link>
+              <router-link to="/about" class="nav">About</router-link>
+              <router-link to="/projects" class="nav">Projects</router-link>
+              <router-link to="/contact" class="nav">Contact</router-link>
             </nav>
         </header>
 
@@ -21,9 +21,14 @@
             <img src="../assets/bush1.png" class="bush1">
             <img src="../assets/leaf2.png" class="leaf2">
             <img src="../assets/leaf1.png" class="leaf1">
+            <div class="scroll-down" @click="scrollToSection('project')">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-10 h-10">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </div>
         </section>
     
-        <section>
+        <section class="project">
             <div>
             <h4 class="h4">Past Projects</h4>
             <h5 class="h5">Projects I've made so far</h5>
@@ -168,14 +173,20 @@
           this.isScaled = true;
           this.$refs.video.style.transform = 'scale(0.5)';
         },
-    //     handleScroll() {
-    //     const nav = document.querySelector('.nav');
-    //     if (window.scrollY > 0) {
-    //       nav.classList.add('scrolled');
-    //     } else {
-    //       nav.classList.remove('scrolled');
-    //     }
-    //   }
+        handleScroll() {
+        const header = document.querySelector('header');
+        if (window.scrollY > 0) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      },
+      scrollToSection(sectionClass) {
+      const section = document.querySelector(`.${sectionClass}`);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
       }
     };
 </script>
@@ -183,6 +194,15 @@
     
     <style src="../assets/css/styles.css"></style>
     <style>
+    .scroll-down {
+  position: absolute;
+  bottom: 5vw;
+  margin-left: 48vw;
+  transform: translateX(-50%);
+  cursor: pointer;
+  animation: bounce 2s infinite;
+  color: #fff;
+}
     .item-card:hover {
       transition: transform 0.3s ease;
       transform: translateY(-8px);
@@ -214,15 +234,50 @@
         margin-bottom: 3vw;
     }
 
-    .nav{
+    nav{
         position: fixed;
+        padding: 3%;
+        z-index: 999;
+    }
+
+    .nav{
+      color: #ffffff;
+    }
+
+    header nav{
+      gap: 0;
+      
+    }
+
+    header{
+      padding: 0;
+      position: fixed
+    }
+
+    .scrolled {
+      backdrop-filter: blur(10px) brightness(0.8);
     }
 
     @media (max-width: 768px){
-        .nav{
+    nav{
         position: fixed;
+        padding: 3%;
+        z-index: 999;
         transform: scale(0.7);
-        margin-left: -22vw;
+    }
+
+    .nav{
+      color: #ffffff;
+    }
+
+    header nav{
+      gap: 0;
+      
+    }
+
+    header{
+      padding: 0;
+      position: fixed
     }
     }
     
@@ -242,10 +297,6 @@
     }
     
     ::-webkit-scrollbar-button { width: 20px; }
-           
-    .scrolled {
-    background-color: white;
-    }
     </style>
     
     

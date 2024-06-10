@@ -19,10 +19,15 @@
           <img src="../assets/bush1.png" class="bush1">
           <img src="../assets/leaf2.png" class="leaf2">
           <img src="../assets/leaf1.png" class="leaf1">
+          <div class="scroll-down" @click="scrollToSection('about')">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-10 h-10">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </div>
       </section>
       
       <section
-        class="text-sm md:text-lg text-justify flex flex-col gap-4 md:flex-row md:gap-8 md:justify-left md:items-center" style="background-color: #3b3291;">
+        class="about text-sm md:text-lg text-justify flex flex-col gap-4 md:flex-row md:gap-8 md:justify-left md:items-center" style="background-color: #3b3291;">
         <div class="flex justify-center">
           <img class="w-9/12 rounded-full mb-3 fadein-up"
           src="/img/porto.png" alt="Foto" style="width: 30vw; margin-left: 4vw; margin-right: 3vw;">
@@ -206,8 +211,12 @@
             mounted() {
               this.$nextTick(() => {
                 this.tick();
+                window.addEventListener('scroll', this.handleScroll);
               });
             },
+            unmounted() {
+  window.removeEventListener('scroll', this.handleScroll);
+},
             methods: {
               tick() {
                 let typewriter = this.$refs.typewriter;
@@ -242,6 +251,20 @@
                   that.tick();
                 }, delta);
               },
+              handleScroll() {
+        const header = document.querySelector('header');
+        if (window.scrollY > 0) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      },
+      scrollToSection(sectionClass) {
+      const section = document.querySelector(`.${sectionClass}`);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
             }
           }
           </script>
