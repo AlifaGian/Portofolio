@@ -5,7 +5,7 @@
               <router-link to="/" class="nav">Home</router-link>
               <router-link to="/about" class="nav">About</router-link>
               <router-link to="/projects" class="nav">Projects</router-link>
-              <router-link to="/contact" class="nav">Contact</router-link>
+              <router-link to="/achievement" class="nav">Achievement</router-link>
             </nav>
         </header>
 
@@ -88,6 +88,7 @@
     </script>
     
         <script>
+        import '../script.js';
             export default {
                 mounted() {
       window.addEventListener('scroll', this.handleScroll);
@@ -134,7 +135,7 @@
               imageUrl: 'gf',
               status: 'A website that provides a wide range of luxury cars for purchase, as well as a wide range of car merchandise, car service services and our original products.',
               tech: 'VueJS3',
-              github: 'null',
+              github: 'https://github.com/AlifaGian/GF-Luxury-Cars.git',
               demo: 'null'
             },
             {
@@ -237,49 +238,53 @@
     nav{
         position: fixed;
         padding: 3%;
-        z-index: 999;
+        z-index: 99999;
     }
 
     .nav{
       color: #ffffff;
+      z-index: 99999;
     }
 
     header nav{
       gap: 0;
-      
+      z-index: 99999;
     }
 
     header{
       padding: 0;
-      position: fixed
+      position: fixed;
+      z-index: 99999;
     }
 
     .scrolled {
       backdrop-filter: blur(10px) brightness(0.8);
     }
 
-    @media (max-width: 768px){
-    nav{
-        position: fixed;
-        padding: 3%;
-        z-index: 999;
-        transform: scale(0.7);
-    }
+    nav.nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 2vw;
+}
 
-    .nav{
-      color: #ffffff;
-    }
+/* CSS for Home section */
+.home {
+  position: relative; /* Ensure scroll-down button is positioned correctly */
+}
 
-    header nav{
-      gap: 0;
-      
-    }
+/* Other styles remain unchanged */
 
-    header{
-      padding: 0;
-      position: fixed
-    }
-    }
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+  nav.nav {
+    width: 100vw;
+    font-size: 2vw;
+  }
+  header nav a{
+    font-size: 3.5vw;
+  }
+}
     
             ::-webkit-scrollbar {
       width: 5px; /* for vertical scrollbar */
@@ -298,5 +303,3 @@
     
     ::-webkit-scrollbar-button { width: 20px; }
     </style>
-    
-    

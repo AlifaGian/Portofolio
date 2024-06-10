@@ -2,10 +2,10 @@
   <div>
     <header>
       <nav class="nav">
-        <router-link to="/" class="nav">Home</router-link>
-        <router-link to="/about" class="nav">About</router-link>
-        <router-link to="/projects" class="nav">Projects</router-link>
-        <router-link to="/achievement" class="nav">Achievement</router-link>
+        <router-link to="/">Home</router-link>
+        <router-link to="/about">About</router-link>
+        <router-link to="/projects">Projects</router-link>
+        <router-link to="/achievement">Achievement</router-link>
       </nav>
     </header>
 
@@ -14,43 +14,64 @@
       <img src="../assets/mount1.png" class="mount1">
       <img src="../assets/bush2.png" class="bush2">
 
-      <div class="title" style="font-size: 5VW;">Alifa Gian Rafid</div>
+      <h1 class="title" style="font-size: 5VW;">Achievement</h1>
 
       <img src="../assets/bush1.png" class="bush1">
       <img src="../assets/leaf2.png" class="leaf2">
       <img src="../assets/leaf1.png" class="leaf1">
-
-      
-      <div class="scroll-down" @click="scrollToSection('about')">
-      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-10 h-10">
-        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
-      </svg>
-    </div>
+      <div class="scroll-down" @click="scrollToSection('achievements')">
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-10 h-10">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+        </svg>
+      </div>
     </section>
 
-    <section class="about">
-      <main class="mt-10 md:mt-1 flex flex-col-reverse gap-8 items-center md:flex-row md:gap-16 md:justify-center min-h-[65vh] md:min-h-[80vh]">
-        <div class="space-y-2 text-center md:text-left px-10">
-          <h2 class="text-amber-200" style="color: white;">Hello World, I'm</h2>
-          <div class="nama"><b>Alifa Gian Rafid</b></div>
-          <div class="py-2">
-            <div class="typewrite text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-yellow-500 md:text-2xl fadein-up" ref="typewriter">
-              <div class="wrap">{{ txt }}</div>
-            </div>
-          </div>
-          <div class="desc">Welcome to My personal website. <span class="wave">👋🏼</span></div>
-          <br>
-        </div>
-        <div class="foto">
-          <img alt="avatar" fetchpriority="high" width="300" height="300" decoding="async" data-nimg="1" class="w-10/12 md:h-auto rounded-full border-4 border-amber-200 pict" style="border-color: aqua;" src="/img/porto.png">
-        </div>
-      </main>    
+    <section class="achievements">
+      <h4 class="h4">My Achievement</h4>
+      <h5 class="h5">Achievements that I have</h5>
+      <ul>
+  <li v-for="achievement in achievements" :key="achievement.id" class="achievement-item">
+    <div class="achievement-image" @click="openPopup(achievement.image)">
+      <img :src="achievement.image" :alt="achievement.title" />
+    </div>
+    <div class="achievement-text">
+      <div class="achievement-title">{{ achievement.title }}</div>
+      <div v-html="achievement.description"></div>
+    </div>
+  </li>
+</ul>
+<div v-if="isPopupOpen" class="popup" @click="closePopup">
+  <img :src="popupImage" class="popup-image" />
+</div>
     </section>
   </div>
 </template>
 
 <script setup>
+import { ref } from 'vue';
 import '../script.js';
+
+// Daftar penghargaan
+const achievements = ref([
+{
+    id: 1,
+    title: 'Top 10 LPDP Business Plan Provinsi Jawa Barat',
+    description: 'A business plan competition is a competition where participants are required to create and present a structured and detailed business plan. This business plan usually covers various aspects of a business, such as product or service ideas, market analysis, marketing strategies, financial projections, and operational plans. I participated in this competition in a team of 3 people, my main task in this team is as UI/UX Designer. Here is the link of the figma that I worked on. <a class="link" href="https://www.figma.com/design/MAdhFZi2Qt8ijKNs0SCeV2/Prototype?node-id=0-1&t=SgLe3HrDnDE0nzri-1" target="_blank">Click Here</a>',
+    image: '/img/sertifikat.png'
+  },
+]);
+
+const isPopupOpen = ref(false);
+const popupImage = ref('');
+
+const openPopup = (image) => {
+  popupImage.value = image;
+  isPopupOpen.value = true;
+};
+
+const closePopup = () => {
+  isPopupOpen.value = false;
+};
 </script>
 
 <script>
@@ -63,6 +84,7 @@ export default {
       txt: '',
       loopNum: 0,
       isDeleting: false,
+      activeTab: 1,
     };
   },
   mounted() {
@@ -128,25 +150,14 @@ export default {
 
 <style src="../assets/css/styles.css"></style>
 <style>
-.foto img{
-  width: 30vw;
-}
-.nama{
-  font-size: 3vw;
-}
-
-.text-amber-200{
-  font-size: 2vw;
-}
 body {
   overflow-y: scroll;
   overflow-x: hidden;
+  background-color: #3b3291;
 }
 
 .typewrite>.wrap {
   border-right: 0.08em solid #fff;
-  color: #49adff;
-  font-size: 3.3vw;
 }
 
 .wave {
@@ -281,27 +292,6 @@ body {
   animation-delay: 500ms;
 }
 
-.scroll-down {
-  position: fixed; /* Change from absolute to fixed */
-  bottom: 5vw;
-  left: 0%;
-  transform: translateX(-50%);
-  cursor: pointer;
-  animation: bounce 2s infinite;
-  color: #fff;
-}
-@keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    transform: translateY(0);
-  }
-  40% {
-    transform: translateY(-10px);
-  }
-  60% {
-    transform: translateY(-5px);
-  }
-}
-
 ::-webkit-scrollbar {
   width: 5px; /* for vertical scrollbar */
   height: 5px; /* for horizontal scrollbar */
@@ -317,29 +307,142 @@ body {
   border-radius: 5px;
 }
 
-::-webkit-scrollbar-button { width: 20px; }
+::-webkit-scrollbar-button {
+  width: 20px;
+}
 
-@media (max-width: 768px)
-{
-  .text-amber-200{
-    font-size: 4vw;
+/* CSS for Skills section */
+.skills-section {
+  margin: 20px;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
+
+.tabs {
+  justify-content: center;
+  margin-bottom: 1.25rem;
+}
+
+.tab-button {
+  padding: 0.75rem 1rem;
+  border-radius: 0.5rem;
+  background-color: transparent;
+  color: #6b7280;
+  border: none;
+  cursor: pointer;
+}
+
+.tab-button:hover {
+  color: #fff;
+}
+
+.tab-button.active {
+  color: #fbbf24;
+  background-color: rgba(251, 191, 36, 0.1);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(150px, 1fr));
+  gap: 20px;
+  padding-bottom: 8rem;
+  margin: 0;
+}
+
+.grid-item {
+  display: flex;
+  justify-content: center;
+}
+
+.item-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.25);
+  border-radius: 0.75rem;
+  padding: 0.75rem 1.25rem;
+  color: #e5e7eb;
+  text-decoration: none;
+  transition: transform 0.3s ease;
+}
+
+.item-card:hover {
+  transform: translateY(-0.25rem);
+  color: #e5e7eb;
+}
+
+.item-card img {
+  margin-bottom: 0.75rem;
+  max-width: 100%;
+  height: auto;
+}
+
+@media screen and (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(2, minmax(150px, 1fr));
   }
-  .nama{
-    font-size: 5vw;
+}
+
+@media screen and (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: repeat(1, minmax(150px, 1fr));
   }
-  .typewrite>.wrap{
-    font-size: 5vw;
-  }
-  .desc{
-    font-size: 3vw;
-  }
-  .foto img{
-    width: 50vw;
-    margin-left: 2vw;
-  }
-  .scroll-down svg {
-    bottom: 5%;
-    width: 5vw;
-  }
+}
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.popup-image {
+  max-width: 90%;
+  max-height: 90%;
+}
+
+.achievement-image {
+  cursor: pointer;
+}
+
+.achievement-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.achievement-text {
+  flex: 1;
+  color: white;
+  font-size: 1.8vw;
+  text-align: left;
+  margin-left: 1vw;
+}
+
+.achievement-title {
+  color: aqua;
+  font-size: 2.3vw;
+}
+
+.achievement-image img {
+  width: 40vw;
+  height: auto;
+  margin-left: 2vw;
+}
+
+.link{
+  color: aqua;
 }
 </style>
