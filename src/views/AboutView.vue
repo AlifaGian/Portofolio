@@ -1,20 +1,20 @@
 <template>
   <div>
-      <header>
-          <nav class="nav">
-            <router-link to="/">Home</router-link>
-            <router-link to="/about">About</router-link>
-              <router-link to="/projects">Projects</router-link>
-              <router-link to="/achievement">Achievement</router-link>
-          </nav>
-      </header>
+    <header>
+      <nav class="nav">
+        <router-link to="/" class="nav">Beranda</router-link>
+        <router-link to="/about" class="nav">Tentang</router-link>
+        <router-link to="/projects" class="nav">Proyek</router-link>
+        <router-link to="/achievement" class="nav">Penghargaan</router-link>
+      </nav>
+    </header>
   
       <section class="home">
           <img src="../assets/mount2.png" class="mount2">
           <img src="../assets/mount1.png" class="mount1">
           <img src="../assets/bush2.png" class="bush2">
   
-          <h1 class="title" style="font-size: 5VW;">About</h1>
+          <h1 class="title" style="font-size: 5VW;">Tentang</h1>
   
           <img src="../assets/bush1.png" class="bush1">
           <img src="../assets/leaf2.png" class="leaf2">
@@ -34,12 +34,12 @@
         </div>
         <div class="md:w-7/12">
           <p class="mb-3 md:mb-7 fadein-left fadeins-1" style="color: white;">
-            Hi everyone! My name is Alifa Gian Rafid. I'm a web developer from Bandung, West Java. I
-            have 1 year of experience in front-end web development.
-            I really enjoy what I do right now, In my opinion, creating a web is not just a job, but it's like pouring out creative ideas from our minds.
+            Hai semuanya! Nama saya Alifa Gian Rafid. Saya adalah seorang web developer dari Bandung, Jawa Barat.
+            Saya memiliki 1 tahun pengalaman dalam pengembangan web front-end.
+            Saya sangat menikmati apa yang saya kerjakan saat ini. Menurut saya, membuat web bukan hanya sekedar pekerjaan, tetapi seperti menuangkan ide-ide kreatif dari pikiran kita.
           </p>
           <p class="mb-3 fadein-left fadeins-2" style="color: white;">
-            Besides making websites, I also enjoy making 3d models, games, and even video editing.
+            Selain membuat situs web, saya juga senang membuat model 3d, game, dan bahkan mengedit video.
           </p>
         </div>
 
@@ -50,10 +50,10 @@
   <div>
     <ul class="tabs flex justify-center mb-5">
       <li class="mr-2">
-        <button style="color: white;" class="tab-button" :class="{ 'active': activeTab === 1 }" @click="activeTab = 1" >Tech Stack</button>
+        <button style="color: white;" class="tab-button" :class="{ 'active': activeTab === 1 }" @click="activeTab = 1" >Keahlian</button>
       </li>
       <li class="mr-2">
-        <button style="color: white;" class="tab-button" :class="{ 'active': activeTab === 2 }" @click="activeTab = 2">Tools</button>
+        <button style="color: white;" class="tab-button" :class="{ 'active': activeTab === 2 }" @click="activeTab = 2">Alat</button>
       </li>
     </ul>
   </div>
@@ -112,49 +112,49 @@
           id: 1,
           name: 'HTML',
           imageUrl: 'https://cdn-icons-png.flaticon.com/512/1051/1051277.png',
-          status: 'Intermediate'
+          status: 'Terbiasa'
         },
         {
           id: 2,
           name: 'CSS',
           imageUrl: 'https://cdn-icons-png.flaticon.com/512/732/732190.png',
-          status: 'Intermediate'
+          status: 'Terbiasa'
         },
         {
           id: 3,
           name: 'Java',
           imageUrl: 'https://cdn.iconscout.com/icon/free/png-512/free-java-25-226002.png?f=webp&w=256',
-          status: 'Beginner'
+          status: 'Pemula'
         },
         {
           id: 4,
           name: 'Javascript',
-          imageUrl: 'https://cdn.icon-icons.com/icons2/2415/PNG/512/javascript_original_logo_icon_146455.png',
-          status: 'Beginner'
+          imageUrl: 'https://cdn.iconscout.com/icon/free/png-512/free-javascript-logo-icon-download-in-svg-png-gif-file-formats--brand-development-tools-pack-logos-icons-225993.png?f=webp&w=256',
+          status: 'Pemula'
         },
         {
           id: 5,
           name: 'VueJS',
           imageUrl: 'https://cdn.iconscout.com/icon/free/png-256/free-vue-282497.png?f=webp',
-          status: 'Intermediate'
+          status: 'Terbiasa'
         },
         {
           id: 6,
           name: 'NodeJS',
           imageUrl: 'https://cdn.iconscout.com/icon/free/png-256/free-node-js-1174925.png',
-          status: 'Beginner'
+          status: 'Pemula'
         },
         {
           id: 7,
           name: 'C#',
           imageUrl: 'https://cdn.iconscout.com/icon/free/png-512/free-c-2336965-1982846.png?f=webp&w=256',
-          status: 'Beginner'
+          status: 'Pemula'
         },
         {
           id: 8,
-          name: 'Quasar',
-          imageUrl: 'https://cdn.quasar.dev/logo-v2/svg/logo.svg',
-          status: 'Beginner'
+          name: 'Tailwind',
+          imageUrl: 'https://cdn.iconscout.com/icon/free/png-512/free-tailwind-css-logo-icon-download-in-svg-png-gif-file-formats--social-media-pack-logos-icons-4406745.png?f=webp&w=256',
+          status: 'Pemula'
         },
       ],
       tools: [

@@ -2,10 +2,10 @@
   <div>
     <header>
       <nav class="nav">
-        <router-link to="/" class="nav">Home</router-link>
-        <router-link to="/about" class="nav">About</router-link>
-        <router-link to="/projects" class="nav">Projects</router-link>
-        <router-link to="/achievement" class="nav">Achievement</router-link>
+        <router-link to="/" class="nav">Beranda</router-link>
+        <router-link to="/about" class="nav">Tentang</router-link>
+        <router-link to="/projects" class="nav">Proyek</router-link>
+        <router-link to="/achievement" class="nav">Penghargaan</router-link>
       </nav>
     </header>
 
@@ -31,14 +31,14 @@
     <section class="about">
       <main class="mt-10 md:mt-1 flex flex-col-reverse gap-8 items-center md:flex-row md:gap-16 md:justify-center min-h-[65vh] md:min-h-[80vh]">
         <div class="space-y-2 text-center md:text-left px-10">
-          <h2 class="text-amber-200" style="color: white;">Hello World, I'm</h2>
+          <h2 class="text-amber-200" style="color: white;">Hai Dunia, Saya</h2>
           <div class="nama"><b>Alifa Gian Rafid</b></div>
           <div class="py-2">
             <div class="typewrite text-xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-slate-100 to-yellow-500 md:text-2xl fadein-up" ref="typewriter">
               <div class="wrap">{{ txt }}</div>
             </div>
           </div>
-          <div class="desc">Welcome to My personal website. <span class="wave">👋🏼</span></div>
+          <div class="desc">Selamat datang di website personal saya. <span class="wave">👋🏼</span></div>
           <br>
         </div>
         <div class="foto">

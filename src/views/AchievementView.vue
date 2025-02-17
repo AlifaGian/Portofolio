@@ -2,10 +2,10 @@
   <div>
     <header>
       <nav class="nav">
-        <router-link to="/">Home</router-link>
-        <router-link to="/about">About</router-link>
-        <router-link to="/projects">Projects</router-link>
-        <router-link to="/achievement">Achievement</router-link>
+        <router-link to="/" class="nav">Beranda</router-link>
+        <router-link to="/about" class="nav">Tentang</router-link>
+        <router-link to="/projects" class="nav">Proyek</router-link>
+        <router-link to="/achievement" class="nav">Penghargaan</router-link>
       </nav>
     </header>
 
@@ -14,7 +14,7 @@
       <img src="../assets/mount1.png" class="mount1">
       <img src="../assets/bush2.png" class="bush2">
 
-      <h1 class="title" style="font-size: 5VW;">Achievement</h1>
+      <h1 class="title" style="font-size: 5VW;">Penghargaan</h1>
 
       <img src="../assets/bush1.png" class="bush1">
       <img src="../assets/leaf2.png" class="leaf2">
@@ -27,8 +27,8 @@
     </section>
 
     <section class="achievements">
-      <h4 class="h4">My Achievement</h4>
-      <h5 class="h5">Achievements that I have</h5>
+      <h4 class="h4">Penghargaan Saya</h4>
+      <h5 class="h5">Penghargaan yang saya miliki</h5>
       <ul>
   <li v-for="achievement in achievements" :key="achievement.id" class="achievement-item">
     <div class="achievement-image" @click="openPopup(achievement.image)">
@@ -55,8 +55,8 @@ import '../script.js';
 const achievements = ref([
 {
     id: 1,
-    title: 'Top 10 LPDP Business Plan Provinsi Jawa Barat',
-    description: 'A business plan competition is a competition where participants are required to create and present a structured and detailed business plan. This business plan usually covers various aspects of a business, such as product or service ideas, market analysis, marketing strategies, financial projections, and operational plans. I participated in this competition in a team of 3 people, my main task in this team is as UI/UX Designer. Here is the link of the figma that I worked on. <a class="link" href="https://www.figma.com/design/MAdhFZi2Qt8ijKNs0SCeV2/Prototype?node-id=0-1&t=SgLe3HrDnDE0nzri-1" target="_blank">Click Here</a>',
+    title: 'Peserta 10 Besar LPDP Business Plan Provinsi Jawa Barat',
+    description: 'Kompetisi rencana bisnis adalah kompetisi di mana para peserta diharuskan membuat dan mempresentasikan rencana bisnis yang terstruktur dan terperinci. Business plan ini biasanya mencakup berbagai aspek dalam sebuah bisnis, seperti ide produk atau jasa, analisis pasar, strategi pemasaran, proyeksi keuangan, dan rencana operasional. Saya mengikuti kompetisi ini dalam sebuah tim yang beranggotakan 3 orang, tugas utama saya dalam tim ini adalah sebagai UI/UX Designer. Berikut adalah link dari figma yang saya kerjakan. <a class="link" href="https://www.figma.com/design/MAdhFZi2Qt8ijKNs0SCeV2/Prototype?node-id=0-1&t=SgLe3HrDnDE0nzri-1" target="_blank">Klik Disini </a>',
     image: '/img/sertifikat.png'
   },
 ]);

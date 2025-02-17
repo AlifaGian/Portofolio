@@ -1,13 +1,13 @@
 <template>
     <div>
-        <header class="header">
-            <nav class="nav">
-              <router-link to="/" class="nav">Home</router-link>
-              <router-link to="/about" class="nav">About</router-link>
-              <router-link to="/projects" class="nav">Projects</router-link>
-              <router-link to="/achievement" class="nav">Achievement</router-link>
-            </nav>
-        </header>
+      <header>
+      <nav class="nav">
+        <router-link to="/" class="nav">Beranda</router-link>
+        <router-link to="/about" class="nav">Tentang</router-link>
+        <router-link to="/projects" class="nav">Proyek</router-link>
+        <router-link to="/achievement" class="nav">Penghargaan</router-link>
+      </nav>
+    </header>
 
         
     
@@ -30,8 +30,8 @@
     
         <section class="project">
             <div>
-            <h4 class="h4">Past Projects</h4>
-            <h5 class="h5">Projects I've made so far</h5>
+            <h4 class="h4">Proyek Saya</h4>
+            <h5 class="h5">Beberapa proyek yang telah saya kerjakan</h5>
               <div class="grid grid-cols-1 gap-4 pb-32 md:grid-cols-3 md:gap-3 xl:grid-cols-3 xl:gap-3 2xl:gap-5 fade-zoom-in"> 
                 <div v-for="item in items" :key="item.id" @click="openModal(item.videoUrl)">
                   <div class="item-card flex flex-col items-center gap-2 rounded bg-[#27215e] hover:bg-[#322b78] border border-[#383838] rounded-xl text-amber-50 md:gap-3 px-5 py-5 lg:px-5">
@@ -104,9 +104,9 @@
           items: [
             {
               id: 1,
-              name: 'Personal Website',
+              name: 'Situs Web Personal',
               imageUrl: 'portfolio_v2',
-              status: 'My personal website, I created this website to display my profile, skills and projects. As well as my place to try new technology.',
+              status: 'Situs web pribadi saya, saya membuat situs web ini untuk menampilkan profil, keterampilan, dan proyek saya.',
               tech: 'VueJS 3, Tailwind',
               github: 'null',
               demo: 'null'
@@ -115,7 +115,7 @@
               id: 2,
               name: 'Keraton Kasepuhan Cirebon',
               imageUrl: 'keraton',
-              status: 'A website created to tell the history of the palace, and booking tour tickets. Here I work as a team and work on the front-end. ',
+              status: 'Sebuah situs web yang dibuat untuk menceritakan sejarah keraton, dan pemesanan tiket tur. Di sini saya bekerja sebagai tim dan bekerja di bagian front-end.',
               tech: 'VueJS 3, Quasar',
               github: 'https://github.com/AlifaGian/Keraton.git',
               demo: 'null'
@@ -124,7 +124,7 @@
               id: 3,
               name: 'Schools POV',
               imageUrl: 'sistekdes',
-              status: 'Games about school life such as tests, studying, and school exploration. Here I worked in a team and worked in the 3D modeling section as well as helping with the coding process.',
+              status: 'Game tentang kehidupan sekolah seperti ujian, belajar, dan eksplorasi sekolah. Di sini saya bekerja dalam tim dan bekerja di bagian pemodelan 3D serta membantu proses pengkodean.',
               tech: 'Unity, Blender',
               github: 'null',
               demo: 'null'
@@ -133,14 +133,14 @@
               id: 4,
               name: 'GF Luxury Car',
               imageUrl: 'gf',
-              status: 'A website that provides a wide range of luxury cars for purchase, as well as a wide range of car merchandise, car service services and our original products.',
+              status: 'Situs web yang menyediakan berbagai macam mobil mewah untuk dibeli, serta berbagai macam barang dagangan mobil, layanan servis mobil, dan produk orisinal kami.',
               tech: 'VueJS3',
               github: 'https://github.com/AlifaGian/GF-Luxury-Cars.git',
               demo: 'null'
             },
             {
               id: 5,
-              name: 'Battery Animation',
+              name: 'Animasi Baterai',
               imageUrl: 'blender',
               tech: 'Blender',
               github: 'null',
@@ -149,7 +149,7 @@
             },
             {
               id: 6,
-              name: 'My Best Edit So Far',
+              name: 'Hasil video editing saya',
               imageUrl: 'edit',
               tech: 'Adobe After Effect',
               github: 'null',
