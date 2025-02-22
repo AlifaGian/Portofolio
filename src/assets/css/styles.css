@@ -38,7 +38,7 @@ header nav a.active {
     background: #5247B9;
 }
 header nav a:hover {
-    background: #5247B9;
+    background: #3c3c3c;
 }
 header nav:hover > a:not(:hover) {
     background: none;
@@ -47,7 +47,7 @@ header nav:hover > a:not(:hover) {
 .home {
     display: flex;
     height: 100dvh;
-    background: linear-gradient(to top, #D2E2FB 30%, #86A8DB);
+    background: linear-gradient(to top, #FFFFFF 10%, #000000);
     position: relative;
     overflow: hidden;
 }
@@ -71,7 +71,7 @@ header nav:hover > a:not(:hover) {
 
 .about {
     padding: 50px;
-    background: #3B3291;
+    background: #3c3c3c;
     color: white;
     position: relative;
     z-index: 100;

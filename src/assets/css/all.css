@@ -1,0 +1,931 @@
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #3c3c3c;
+  }
+  
+  .typewrite>.wrap {
+    border-right: 0.08em solid #fff;
+  }
+  
+  .wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block
+  }
+  
+  @keyframes wave-animation {
+    0% {
+      transform: rotate(0deg)
+    }
+  
+    10% {
+      transform: rotate(14deg)
+    }
+  
+    20% {
+      transform: rotate(-8deg)
+    }
+  
+    30% {
+      transform: rotate(14deg)
+    }
+  
+    40% {
+      transform: rotate(-4deg)
+    }
+  
+    50% {
+      transform: rotate(10deg)
+    }
+  
+    60% {
+      transform: rotate(0deg)
+    }
+  
+    to {
+      transform: rotate(0deg)
+    }
+  }
+  
+  .pict {
+    box-shadow: 0px 0px 73px -9px rgba(255, 255, 255, 0.44);
+  -webkit-box-shadow: 0px 0px 73px -9px rgba(255, 255, 255, 0.44);
+  -moz-box-shadow: 0px 0px 73px -9px rgba(255, 255, 255, 0.44);
+  }
+  
+  .fadein-up {
+    opacity: 0;
+    animation-name: fadeInUp;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 500ms;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fade-in-from-left {
+    opacity: 0;
+    animation: fadeInLeft 0.5s ease-out forwards;
+    animation-delay: 500ms;
+  }
+  
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .fadein-right {
+    opacity: 0;
+    animation: fadeInRight 0.5s ease-out forwards;
+    animation-delay: 500ms;
+  }
+  
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .fadein-bot {
+    opacity: 0;
+    animation: fadeInBot 0.5s forwards;
+  }
+  
+  @keyframes fadeInBot {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadein-1 {
+    animation-delay: 200ms;
+  }
+  .fadein-2 {
+    animation-delay: 400ms;
+  }
+  .fadein-3 {
+    animation-delay: 600ms;
+  }
+  .fade-500 {
+    animation-delay: 500ms;
+  }
+
+  ::-webkit-scrollbar {
+width: 5px; /* for vertical scrollbar */
+height: 5px; /* for horizontal scrollbar */
+}
+
+::-webkit-scrollbar-track {
+background: hsl(240, 1%, 17%);
+border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+background: #ffffff;
+border-radius: 5px;
+}
+
+::-webkit-scrollbar-button { width: 20px; }
+ 
+/* CSS for Skills section */
+.skills-section {
+margin: 20px;
+}
+
+.text-center {
+text-align: center;
+}
+
+.mb-5 {
+margin-bottom: 1.25rem;
+}
+
+.tabs {
+justify-content: center;
+margin-bottom: 1.25rem;
+}
+
+.tab-button {
+padding: 0.75rem 1rem;
+border-radius: 0.5rem;
+background-color: transparent;
+color: #6b7280;
+border: none;
+cursor: pointer;
+}
+
+.tab-button:hover {
+color: #fff;
+}
+
+.tab-button.active {
+color: #fbbf24;
+background-color: rgba(251, 191, 36, 0.1);
+}
+
+.grid-container {
+display: grid;
+grid-template-columns: repeat(4, minmax(150px, 1fr));
+gap: 20px;
+padding-bottom: 8rem;
+margin: 0;
+}
+
+
+.grid-item {
+display: flex;
+justify-content: center;
+}
+
+.item-card {
+display: flex;
+flex-direction: column;
+align-items: center;
+padding: 1rem;
+border: 1px solid #fbbf24;
+border-radius: 0.5rem;
+transition: background-color 0.3s;
+}
+
+.item-card:hover {
+background-color: rgba(251, 191, 36, 0.1);
+}
+
+.image-container {
+display: flex;
+justify-content: center;
+align-items: center;
+height: 4rem;
+width: 4rem;
+}
+
+.tech-image {
+max-height: 85%;
+max-width: 85%;
+transition: all 0.3s;
+}
+
+.text-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+margin-top: 0.5rem;
+}
+
+.tech-name {
+font-weight: 500;
+color: #4b5563;
+transition: all 0.3s;
+}
+
+.tech-status {
+opacity: 0;
+margin-top: 0.75rem;
+font-size: 0.625rem;
+color: #fbbf24;
+transition: all 0.3s;
+}
+
+.item-card:hover .tech-status {
+opacity: 1;
+}
+
+/* Additional CSS for responsive design */
+@media (max-width: 768px) {
+.grid-container {
+grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+gap: 15px;
+}
+
+.tab-button {
+padding: 0.5rem 0.75rem;
+font-size: 0.875rem;
+}
+
+.tech-name {
+font-size: 0.875rem;
+}
+
+.tech-status {
+font-size: 0.5rem;
+}
+
+.mb-3{
+margin-right: 3vw;
+margin-left: 3vw;
+}
+
+.title{
+font-size: 7vw;
+}
+}
+
+@media (max-width: 480px) {
+.grid-container {
+grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+gap: 10px;
+}
+
+.tab-button {
+padding: 0.5rem 0.5rem;
+font-size: 0.75rem;
+}
+
+.tech-name {
+font-size: 0.75rem;
+}
+
+.tech-status {
+font-size: 0.375rem;
+}
+
+}
+
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+    background-color: #3c3c3c;
+  }
+  
+  .typewrite>.wrap {
+    border-right: 0.08em solid #fff;
+  }
+  
+  .wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block
+  }
+  
+  @keyframes wave-animation {
+    0% {
+      transform: rotate(0deg)
+    }
+  
+    10% {
+      transform: rotate(14deg)
+    }
+  
+    20% {
+      transform: rotate(-8deg)
+    }
+  
+    30% {
+      transform: rotate(14deg)
+    }
+  
+    40% {
+      transform: rotate(-4deg)
+    }
+  
+    50% {
+      transform: rotate(10deg)
+    }
+  
+    60% {
+      transform: rotate(0deg)
+    }
+  
+    to {
+      transform: rotate(0deg)
+    }
+  }
+  
+  .pict {
+    box-shadow: 0px 0px 73px -9px rgba(255, 255, 255, 0.44);
+    -webkit-box-shadow: 0px 0px 73px -9px rgba(255, 255, 255, 0.44);
+    -moz-box-shadow: 0px 0px 73px -9px rgba(255, 255, 255, 0.44);
+  }
+  
+  .fadein-up {
+    opacity: 0;
+    animation-name: fadeInUp;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 500ms;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fade-in-from-left {
+    opacity: 0;
+    animation: fadeInLeft 0.5s ease-out forwards;
+    animation-delay: 500ms;
+  }
+  
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .fadein-right {
+    opacity: 0;
+    animation: fadeInRight 0.5s ease-out forwards;
+    animation-delay: 500ms;
+  }
+  
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .fadein-bot {
+    opacity: 0;
+    animation: fadeInBot 0.5s forwards;
+  }
+  
+  @keyframes fadeInBot {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadein-1 {
+    animation-delay: 200ms;
+  }
+  .fadein-2 {
+    animation-delay: 400ms;
+  }
+  .fadein-3 {
+    animation-delay: 600ms;
+  }
+  .fade-500 {
+    animation-delay: 500ms;
+  }
+  
+  ::-webkit-scrollbar {
+    width: 5px; /* for vertical scrollbar */
+    height: 5px; /* for horizontal scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(240, 1%, 17%);
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-button {
+    width: 20px;
+  }
+  
+  /* CSS for Skills section */
+  .skills-section {
+    margin: 20px;
+  }
+  
+  .text-center {
+    text-align: center;
+  }
+  
+  .mb-5 {
+    margin-bottom: 1.25rem;
+  }
+  
+  .tabs {
+    justify-content: center;
+    margin-bottom: 1.25rem;
+  }
+  
+  .tab-button {
+    padding: 0.75rem 1rem;
+    border-radius: 0.5rem;
+    background-color: transparent;
+    color: #6b7280;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .tab-button:hover {
+    color: #fff;
+  }
+  
+  .tab-button.active {
+    color: #fbbf24;
+    background-color: rgba(251, 191, 36, 0.1);
+  }
+  
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(150px, 1fr));
+    gap: 20px;
+    padding-bottom: 8rem;
+    margin: 0;
+  }
+  
+  .grid-item {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .item-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.25);
+    border-radius: 0.75rem;
+    padding: 0.75rem 1.25rem;
+    color: #e5e7eb;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+  }
+  
+  .item-card:hover {
+    transform: translateY(-0.25rem);
+    color: #e5e7eb;
+  }
+  
+  .item-card img {
+    margin-bottom: 0.75rem;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .grid-container {
+      grid-template-columns: repeat(2, minmax(150px, 1fr));
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .grid-container {
+      grid-template-columns: repeat(1, minmax(150px, 1fr));
+    }
+  }
+  
+  .popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .popup-image {
+    max-width: 90%;
+    max-height: 90%;
+  }
+  
+  .achievement-image {
+    cursor: pointer;
+  }
+  
+  .achievement-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .achievement-text {
+    flex: 1;
+    color: white;
+    font-size: 1.8vw;
+    text-align: left;
+    margin-left: 1vw;
+  }
+  
+  .achievement-title {
+    color: white;
+    font-size: 2.3vw;
+  }
+  
+  .achievement-image img {
+    width: 40vw;
+    height: auto;
+    margin-left: 2vw;
+  }
+  
+  .link{
+    color: aqua;
+  }
+
+  .foto img{
+    width: 30vw;
+  }
+  .nama{
+    font-size: 3vw;
+  }
+  
+  .text-amber-200{
+    font-size: 2vw;
+  }
+  body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+  }
+  
+  .typewrite>.wrap {
+    border-right: 0.08em solid #fff;
+    color: #fff;
+    font-size: 3.3vw;
+  }
+  
+  .wave {
+    animation-name: wave-animation;
+    animation-duration: 2.5s;
+    animation-iteration-count: infinite;
+    transform-origin: 70% 70%;
+    display: inline-block
+  }
+  
+  @keyframes wave-animation {
+    0% {
+      transform: rotate(0deg)
+    }
+  
+    10% {
+      transform: rotate(14deg)
+    }
+  
+    20% {
+      transform: rotate(-8deg)
+    }
+  
+    30% {
+      transform: rotate(14deg)
+    }
+  
+    40% {
+      transform: rotate(-4deg)
+    }
+  
+    50% {
+      transform: rotate(10deg)
+    }
+  
+    60% {
+      transform: rotate(0deg)
+    }
+  
+    to {
+      transform: rotate(0deg)
+    }
+  }
+  
+  .pict {
+    box-shadow: 0px 0px 73px -9px rgba(255, 255, 255, 0.44);
+    -webkit-box-shadow: 0px 0px 73px -9px rgba(255, 255, 255, 0.44);
+    -moz-box-shadow: 0px 0px 73px -9px rgba(255, 255, 255, 0.44);
+  }
+  
+  .fadein-up {
+    opacity: 0;
+    animation-name: fadeInUp;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
+    animation-delay: 500ms;
+  }
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translate3d(0, 100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fade-in-from-left {
+    opacity: 0;
+    animation: fadeInLeft 0.5s ease-out forwards;
+    animation-delay: 500ms;
+  }
+  
+  @keyframes fadeInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .fadein-right {
+    opacity: 0;
+    animation: fadeInRight 0.5s ease-out forwards;
+    animation-delay: 500ms;
+  }
+  
+  @keyframes fadeInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  
+  .fadein-bot {
+    opacity: 0;
+    animation: fadeInBot 0.5s forwards;
+  }
+  
+  @keyframes fadeInBot {
+    from {
+      opacity: 0;
+      transform: translate3d(0, -100%, 0);
+    }
+  
+    to {
+      opacity: 1;
+      transform: translate3d(0, 0, 0);
+    }
+  }
+  
+  .fadein-1 {
+    animation-delay: 200ms;
+  }
+  .fadein-2 {
+    animation-delay: 400ms;
+  }
+  .fadein-3 {
+    animation-delay: 600ms;
+  }
+  .fade-500 {
+    animation-delay: 500ms;
+  }
+  
+  .scroll-down {
+    position: fixed; /* Change from absolute to fixed */
+    bottom: 5vw;
+    left: 0%;
+    transform: translateX(-50%);
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    color: #fff;
+  }
+  @keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {
+      transform: translateY(0);
+    }
+    40% {
+      transform: translateY(-10px);
+    }
+    60% {
+      transform: translateY(-5px);
+    }
+  }
+  
+  ::-webkit-scrollbar {
+    width: 5px; /* for vertical scrollbar */
+    height: 5px; /* for horizontal scrollbar */
+  }
+  
+  ::-webkit-scrollbar-track {
+    background: hsl(240, 1%, 17%);
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    background: #ffffff;
+    border-radius: 5px;
+  }
+  
+  ::-webkit-scrollbar-button { width: 20px; }
+  
+  @media (max-width: 768px)
+  {
+    .text-amber-200{
+      font-size: 4vw;
+    }
+    .nama{
+      font-size: 5vw;
+    }
+    .typewrite>.wrap{
+      font-size: 5vw;
+    }
+    .desc{
+      font-size: 3vw;
+    }
+    .foto img{
+      width: 50vw;
+      margin-left: 2vw;
+    }
+    .scroll-down svg {
+      bottom: 5%;
+      width: 5vw;
+    }
+  }
+
+  .scroll-down {
+    position: absolute;
+    bottom: 5vw;
+    margin-left: 48vw;
+    transform: translateX(-50%);
+    cursor: pointer;
+    animation: bounce 2s infinite;
+    color: #fff;
+  }
+      .item-card:hover {
+        transition: transform 0.3s ease;
+        transform: translateY(-8px);
+      }
+      svg:hover {
+        stroke: #ffdb70;
+      }
+      @keyframes fadeZoomIn {
+        0% {
+          opacity: 0;
+          transform: scale(0.5);
+        }
+        100% {
+          opacity: 1;
+          transform: scale(1);
+        }
+      }
+      .fade-zoom-in {
+        animation: fadeZoomIn 1s ease-in-out;
+      }
+  
+      .h4{
+          font-size: 3vw;
+          color: white;
+      }
+      .h5{
+          font-size: 2vw;
+          color: white;
+          margin-bottom: 3vw;
+      }
+  
+      nav{
+          position: fixed;
+          padding: 3%;
+          z-index: 99999;
+      }
+  
+      .nav{
+        color: #ffffff;
+        z-index: 99999;
+      }
+  
+      header nav{
+        gap: 0;
+        z-index: 99999;
+      }
+  
+      header{
+        padding: 0;
+        position: fixed;
+        z-index: 99999;
+      }
+  
+      .scrolled {
+        backdrop-filter: blur(10px) brightness(0.8);
+      }
+  
+      nav.nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 2vw;
+  }
+  
+  /* CSS for Home section */
+  .home {
+    position: relative; /* Ensure scroll-down button is positioned correctly */
+  }
+  
+  /* Other styles remain unchanged */
+  
+  /* Media queries for responsive design */
+  @media screen and (max-width: 768px) {
+    nav.nav {
+      width: 100vw;
+      font-size: 2vw;
+    }
+    header nav a{
+      font-size: 3.5vw;
+    }
+  }
+      
+              ::-webkit-scrollbar {
+        width: 5px; /* for vertical scrollbar */
+        height: 5px; /* for horizontal scrollbar */
+      }
+      
+      ::-webkit-scrollbar-track {
+        background: hsl(240, 1%, 17%);
+        border-radius: 5px;
+      }
+      
+      ::-webkit-scrollbar-thumb {
+        background: #ffffff;
+        border-radius: 5px;
+      }
+      
+      ::-webkit-scrollbar-button { width: 20px; }

@@ -28,20 +28,20 @@
       </div>
         </section>
     
-        <section class="project">
+        <section class="project bg-[#3c3c3c]">
             <div>
             <h4 class="h4">Proyek Saya</h4>
             <h5 class="h5">Beberapa proyek yang telah saya kerjakan</h5>
               <div class="grid grid-cols-1 gap-4 pb-32 md:grid-cols-3 md:gap-3 xl:grid-cols-3 xl:gap-3 2xl:gap-5 fade-zoom-in"> 
                 <div v-for="item in items" :key="item.id" @click="openModal(item.videoUrl)">
-                  <div class="item-card flex flex-col items-center gap-2 rounded bg-[#27215e] hover:bg-[#322b78] border border-[#383838] rounded-xl text-amber-50 md:gap-3 px-5 py-5 lg:px-5">
-                    <div class="flex h-12 w-12 items-center justify-center p-0 h-full w-full lg:p-0 zoom-in">
+                  <div class="item-card flex flex-col h-full items-center gap-2 rounded bg-[#2c2c2c] hover:bg-[#383838] border border-[#383838] rounded-xl text-amber-50 md:gap-3 px-5 py-5 lg:px-5">
+                    <div class="flex h-128 w-full p-0 lg:p-0 zoom-in">
                       <img alt="Project Image" loading="lazy" decoding="async" data-nimg="1" class="drop-shadow-xl rounded rounded-xl" :src="'/img/portfolio-' + item.imageUrl + '.png'">
                     </div>
                     <div class="w-full flex flex-col gap-2 items-center text-sm md:text-base lg:text-lg">
                       <div class="title-text font-medium text-secondary">{{ item.name }}</div>
                       <div class="w-full text-left text-[10px] text-[#c1c1c1] md:text-xs lg:text-sm">{{ item.status }}</div>
-                      <div class="w-full mt-4 text-normal text-sm text-left text-amber-200" style="color: aqua;">{{ item.tech }}</div>
+                      <div class="w-full mt-4 text-normal text-sm text-left" style="color: white;">{{ item.tech }}</div>
                       <div class="w-full flex justify-end">
                         <div class="flex cursor-pointer items-end gap-2 text-primary">
                           <a v-if="item.github !== 'null'" :href="item.github" target="_blank" rel="noreferrer" title="View github repository" class="transition-all hover:text-accent">
@@ -194,112 +194,5 @@
             
     
     <style src="../assets/css/styles.css"></style>
-    <style>
-    .scroll-down {
-  position: absolute;
-  bottom: 5vw;
-  margin-left: 48vw;
-  transform: translateX(-50%);
-  cursor: pointer;
-  animation: bounce 2s infinite;
-  color: #fff;
-}
-    .item-card:hover {
-      transition: transform 0.3s ease;
-      transform: translateY(-8px);
-    }
-    svg:hover {
-      stroke: #ffdb70;
-    }
-    @keyframes fadeZoomIn {
-      0% {
-        opacity: 0;
-        transform: scale(0.5);
-      }
-      100% {
-        opacity: 1;
-        transform: scale(1);
-      }
-    }
-    .fade-zoom-in {
-      animation: fadeZoomIn 1s ease-in-out;
-    }
-
-    .h4{
-        font-size: 3vw;
-        color: white;
-    }
-    .h5{
-        font-size: 2vw;
-        color: aqua;
-        margin-bottom: 3vw;
-    }
-
-    nav{
-        position: fixed;
-        padding: 3%;
-        z-index: 99999;
-    }
-
-    .nav{
-      color: #ffffff;
-      z-index: 99999;
-    }
-
-    header nav{
-      gap: 0;
-      z-index: 99999;
-    }
-
-    header{
-      padding: 0;
-      position: fixed;
-      z-index: 99999;
-    }
-
-    .scrolled {
-      backdrop-filter: blur(10px) brightness(0.8);
-    }
-
-    nav.nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-left: 2vw;
-}
-
-/* CSS for Home section */
-.home {
-  position: relative; /* Ensure scroll-down button is positioned correctly */
-}
-
-/* Other styles remain unchanged */
-
-/* Media queries for responsive design */
-@media screen and (max-width: 768px) {
-  nav.nav {
-    width: 100vw;
-    font-size: 2vw;
-  }
-  header nav a{
-    font-size: 3.5vw;
-  }
-}
-    
-            ::-webkit-scrollbar {
-      width: 5px; /* for vertical scrollbar */
-      height: 5px; /* for horizontal scrollbar */
-    }
-    
-    ::-webkit-scrollbar-track {
-      background: hsl(240, 1%, 17%);
-      border-radius: 5px;
-    }
-    
-    ::-webkit-scrollbar-thumb {
-      background: #49adff;
-      border-radius: 5px;
-    }
-    
-    ::-webkit-scrollbar-button { width: 20px; }
+    <style src="../assets/css/all.css">
     </style>
