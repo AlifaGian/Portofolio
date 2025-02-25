@@ -44,50 +44,123 @@
         </div>
 
       </section>
-      
-      <section class="skills-section" style="background-color: #3c3c3c; margin-top: 5vw;" >
-  <h2 class="text-center mb-5 text-2xl font-semibold" style="color: white;">Skills</h2>
-  <div>
-    <ul class="tabs flex justify-center mb-5">
-      <li class="mr-2">
-        <button style="color: white;" class="tab-button" :class="{ 'active': activeTab === 1 }" @click="activeTab = 1" >Keahlian</button>
+
+      <section
+  class="experience-education text-sm md:text-lg text-justify flex flex-col gap-4 md:flex-row md:gap-8 md:justify-left md:items-center"
+  style="background-color: #3c3c3c; padding: 4vw;">
+  <div class="md:w-7/12">
+    <h2 class="text-center text-2xl font-semibold mb-5" style="color: white;">Pengalaman</h2>
+    <ul class="list-disc pl-5 text-white">
+      <li class="mb-3 fadein-left fadeins-1">
+        <strong>Teaching Factory (TEFA) SMKN 4 Bandung</strong> (Februari - Juni 2024) <br>
+        Sebagai leader dalam pengembangan proyek website Keraton Kasepuhan Cirebon yang dilaksanakan bersama PT Curaweda Palagan Innotech.
       </li>
-      <li class="mr-2">
-        <button style="color: white;" class="tab-button" :class="{ 'active': activeTab === 2 }" @click="activeTab = 2">Alat</button>
+      <li class="mb-3 fadein-left fadeins-2">
+        <strong>Praktik Kerja Lapangan di Universitas Komputer Indonesia</strong> (Juli - Oktober 2024) <br>
+        Mendesain ulang website UNIKOM dan mengelola data backlink dari beberapa sitemap yang berkaitan dengan Universitas Komputer Indonesia.
       </li>
     </ul>
   </div>
-  <div v-show="activeTab === 1">
-    <div class="grid-container">
-      <div v-for="item in tech" :key="item.id" class="grid-item">
-        <div class="item-card" style="border: 1px solid #ffffff;">
-          <div class="image-container">
-            <img :alt="item.name" :src="item.imageUrl" class="tech-image">
-          </div>
-          <div class="text-container">
-            <div class="tech-name" style="color:white;">{{ item.name }}</div>
-            <div class="tech-status" style="color:white;">{{ item.status }}</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div v-show="activeTab === 2">
-    <div class="grid-container">
-      <div v-for="item in tools" :key="item.id" class="grid-item">
-        <div class="item-card" style="border: 1px solid #ffffff;">
-          <div class="image-container">
-            <img :alt="item.name" :src="item.imageUrl" class="tech-image">
-          </div>
-          <div class="text-container">
-            <div class="tech-name" style="color:white;">{{ item.name }}</div>
-            <div class="tech-status" style="color:white;">{{ item.status }}</div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <div class="md:w-7/12">
+    <h2 class="text-center text-2xl font-semibold mb-5" style="color: white;">Pendidikan</h2>
+    <ul class="list-disc pl-5 text-white">
+      <li class="mb-3 fadein-left fadeins-3">
+        <strong>SDN Banjaran 01</strong> (2013 - 2019) <br>
+        Aktif dalam kegiatan ekstrakurikuler Pramuka dan Marching Band.
+      </li>
+      <li class="mb-3 fadein-left fadeins-4">
+        <strong>SMPIT Fithrah Insani 2</strong> (2019 - 2022) <br>
+        Aktif dalam kegiatan ekstrakurikuler IT Club dan organisasi ROHIS.
+      </li>
+      <li class="mb-3 fadein-left fadeins-4">
+        <strong>SMK Negeri 4 Bandung</strong> (2022 - 2025) <br>
+        Aktif dalam kegiatan ekstrakurikuler ORBIT dan Jurnal.
+      </li>
+    </ul>
   </div>
 </section>
+
+      
+<div class="px-5 py-5 md:px-12 md:py-10 text-left text-blue-50 mx-3">
+    <article data-page="about">
+      <header>
+        <div class="text-2xl font-bold text-white mb-5 fadein-bot title-section flex items-center">
+          <div class="h-[1px] w-10 bg-blue-200 md:w-20 aos-init aos-animate" data-aos="zoom-in-left"
+            data-aos-duration="600"></div>
+          &nbsp; Tech & Skills
+        </div>
+      </header>
+      <section>
+        <div>
+          <ul class="flex flex-wrap text-sm font-medium text-center text-gray-500 dark:text-gray-400 mb-5">
+            <li class="mr-2">
+              <button class="inline-block px-4 py-3 rounded-lg hover:text-white"
+                :class="{ 'text-blue-200 bg-blue-200 bg-opacity-10': activeTab === 1 }" @click="activeTab = 1">Tech Stack</button>
+            </li>
+            <li class="mr-2">
+              <button class="inline-block px-4 py-3 rounded-lg hover:text-white"
+                :class="{ 'text-blue-200 bg-blue-200 bg-opacity-10': activeTab === 2 }" @click="activeTab = 2">Tools</button>
+            </li>
+          </ul>
+        </div>
+        <div v-show="activeTab === 1">
+          <div class="grid grid-cols-2 gap-4 pb-32 md:grid-cols-3 md:gap-8 xl:grid-cols-4 xl:gap-10 2xl:gap-12">
+  <div v-for="item in tech" :key="item.id">
+    <div
+      class="group item-tech flex cursor-pointer items-center gap-2 rounded border border-white px-2 py-2 
+      hover:bg-white hover:bg-opacity-10 md:gap-3 lg:px-3 relative">
+      
+      <div class="flex h-12 w-12 items-center justify-center p-0 lg:h-16 lg:w-16 lg:p-2 zoom-in">
+        <img alt="HTML" loading="lazy" width="32" height="32" decoding="async" data-nimg="1"
+          class="img-tech drop-shadow-xl transition-all duration-300 h-[65%] w-[65%] lg:h-[85%] lg:w-[85%]"
+          :src="item.imageUrl" style="color: transparent;">
+      </div>
+
+      <div class="flex flex-col items-start text-sm md:text-base lg:text-lg">
+        <div class="tech font-medium text-secondary transition-all duration-300">{{ item.name }}</div>
+        
+        <!-- Status muncul saat hover -->
+        <div class="status-tech opacity-0 group-hover:opacity-100 transition-all duration-300 text-white 
+        text-[10px] md:text-xs lg:text-sm">
+          {{ item.status }}
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+        </div>
+        <div v-show="activeTab === 2">
+  <div class="grid grid-cols-2 gap-4 pb-32 md:grid-cols-3 md:gap-8 xl:grid-cols-4 xl:gap-10 2xl:gap-12">
+    <div v-for="item in tools" :key="item.id">
+      <div
+        class="group item-tech flex cursor-pointer items-center gap-2 rounded border border-white px-2 py-2 hover:bg-white hover:bg-opacity-10 md:gap-3 lg:px-3 relative">
+        
+        <!-- Logo -->
+        <div class="flex h-12 w-12 items-center justify-center p-0 lg:h-16 lg:w-16 lg:p-2 zoom-in">
+          <img alt="HTML" loading="lazy" width="32" height="32" decoding="async" data-nimg="1"
+            class="img-tech drop-shadow-xl transition-all duration-300 h-[65%] w-[65%] lg:h-[85%] lg:w-[85%]"
+            :src="item.imageUrl" style="color: transparent;">
+        </div>
+
+        <!-- Nama + Status -->
+        <div class="flex flex-col items-start text-sm md:text-base lg:text-lg">
+          <div class="tech font-medium text-secondary transition-all duration-300">{{ item.name }}</div>
+          
+          <!-- Status muncul saat hover -->
+          <div class="status-tech opacity-0 group-hover:opacity-100 transition-all duration-300 text-white text-[10px] md:text-xs lg:text-sm">
+            {{ item.status }}
+          </div>
+        </div>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
+      </section>
+    </article>
+  </div>
       </div>
   </template>
   
