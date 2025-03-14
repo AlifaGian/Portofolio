@@ -140,6 +140,15 @@
             },
             {
               id: 5,
+              name: '4Presence',
+              imageUrl: '4presence',
+              status: 'Sebuah situs web yang dirancang untuk melakukan presensi di SMKN 4 Bandung dengan sistem pengenalan wajah. Di sini saya bekerja sebagai dokumentasi dan video editing untuk pembuatah video promosi dan dokumentasi',
+              tech: '',
+              github: 'null',
+              demo: 'https://hadir.smkn4bdg.sch.id'
+            },
+            {
+              id: 6,
               name: 'Animasi Baterai',
               imageUrl: 'blender',
               tech: 'Blender',
@@ -148,7 +157,7 @@
               videoUrl: './img/blender.mp4'
             },
             {
-              id: 6,
+              id: 7,
               name: 'Hasil video editing saya',
               imageUrl: 'edit',
               tech: 'Adobe After Effect',

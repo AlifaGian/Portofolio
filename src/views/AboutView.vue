@@ -59,6 +59,10 @@
         <strong>Praktik Kerja Lapangan di Universitas Komputer Indonesia</strong> (Juli - Oktober 2024) <br>
         Mendesain ulang website UNIKOM dan mengelola data backlink dari beberapa sitemap yang berkaitan dengan Universitas Komputer Indonesia.
       </li>
+      <li class="mb-3 fadein-left fadeins-2">
+        <strong>Projek Kewirausahaan</strong> (November 2024 - April 2025) <br>
+        Menjadi dokumentasi serta video editor untuk video promosi dan demonstrasi situs web 4Presence.
+      </li>
     </ul>
   </div>
   <div class="md:w-7/12">
@@ -219,8 +223,8 @@
         },
         {
           id: 7,
-          name: 'C#',
-          imageUrl: 'https://cdn.iconscout.com/icon/free/png-512/free-c-2336965-1982846.png?f=webp&w=256',
+          name: 'WordPress',
+          imageUrl: 'https://cdn.iconscout.com/icon/free/png-512/free-wordpress-logo-icon-download-in-svg-png-gif-file-formats--social-media-70-flat-icons-color-pack-logos-432558.png?f=webp&w=256',
           status: 'Pemula'
         },
         {
